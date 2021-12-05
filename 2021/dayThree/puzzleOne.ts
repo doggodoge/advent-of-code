@@ -2,6 +2,7 @@ import getData from './utils/getData.ts';
 
 const data = getData('data/data.txt');
 
+// TODO: This is very messy, try and clean it up at some point.
 function getGammaRate(data: string[]): number {
   let gamma = '';
   for (let index = 0; index < data[0].length; index++) {

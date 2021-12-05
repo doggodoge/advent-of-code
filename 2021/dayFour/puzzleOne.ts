@@ -1,14 +1,14 @@
 import getData from './utils/getData.ts';
 import parseBoards from './utils/parseBoards.ts';
 import Board from './types/Board.ts';
-import parseScores from './utils/parseScores.ts';
+import parseWinningNumbers from './utils/parseWinningNumbers.ts';
 import fillScore from './utils/fillScore.ts';
 import checkScore from './utils/checkScore.ts';
 import getFinalScore from './utils/getFinalScore.ts';
 
 const data = getData('data/data.txt');
 
-const winningNumbers: number[] = parseScores(data);
+const winningNumbers: number[] = parseWinningNumbers(data);
 const boards: Board[] = parseBoards(data);
 
 function playBingo() {

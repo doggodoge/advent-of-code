@@ -1,4 +1,3 @@
-import _ from 'https://deno.land/x/lodash@4.17.19/lodash.js';
 import getData from './utils/getData.ts';
 
 const data = getData('data/data.txt');
@@ -14,6 +13,4 @@ function parseGroundLine(line: string): EnvironmentItem[] {
   );
 }
 
-const parsedData = _.uniq(data.map(parseGroundLine));
-
-console.log();
+console.log('This is a test.');

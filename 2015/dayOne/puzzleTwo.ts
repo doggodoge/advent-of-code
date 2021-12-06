@@ -3,7 +3,7 @@ import Direction from './enums/Direction.ts';
 
 const directions = getData('data/data.txt');
 
-function getIndexOfCharCausingSantaToEnterBasement(
+function getBasementIndex(
   directions: Direction[]
 ): number {
   let currentLevel = 0;
@@ -23,9 +23,9 @@ function getIndexOfCharCausingSantaToEnterBasement(
   Deno.exit(1);
 }
 
-let indexOfCharCausingSantaToEnterBasement =
-  getIndexOfCharCausingSantaToEnterBasement(directions);
+let basementIndex =
+  getBasementIndex(directions);
 
 console.log(
-  `index causing santa to enter basement: ${indexOfCharCausingSantaToEnterBasement}`
+  `index causing santa to enter basement: ${basementIndex}`
 );

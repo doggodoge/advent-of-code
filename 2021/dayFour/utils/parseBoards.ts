@@ -10,9 +10,12 @@ function parseBoard(boardStr: string): Board {
 }
 
 function parseRow(rowStr: string): Score[] {
-  return rowStr.split(/ +/).map(numStr => {
-    return { score: Number(numStr.trim()), checked: false };
-  });
+  return rowStr
+    .trim()
+    .split(/ +/)
+    .map(numStr => {
+      return { score: Number(numStr.trim()), checked: false };
+    });
 }
 
 function parseBoards(data: string): Board[] {

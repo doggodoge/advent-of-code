@@ -1,3 +1,5 @@
+// --- Day 1: Sonar Sweep ---
+// ---  Puzzle 2          ---
 import getData from './utils/getData.ts';
 import getNumberOfIncreasingPings from './utils/getNumberOfIncreasingPings.ts';
 

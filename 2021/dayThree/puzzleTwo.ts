@@ -1,3 +1,5 @@
+// --- Day 3: Binary Diagnostic ---
+// ---  Puzzle 2                ---
 import { assertEquals } from 'https://deno.land/std@0.117.0/testing/asserts.ts';
 
 import getData from './utils/getData.ts';

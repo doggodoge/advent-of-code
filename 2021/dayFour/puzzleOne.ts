@@ -1,3 +1,5 @@
+// --- Day 4: Giant Squid ---
+// ---  Puzzle 1          ---
 import getData from './utils/getData.ts';
 import parseBoards from './utils/parseBoards.ts';
 import Board from './types/Board.ts';

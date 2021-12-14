@@ -1,3 +1,5 @@
+// --- Day 3: Binary Diagnostic ---
+// ---  Puzzle 1                ---
 import getData from './utils/getData.ts';
 
 const data = getData('data/data.txt');

@@ -1,3 +1,5 @@
+// --- Day 2: Dive! ---
+// ---  Puzzle 1    ---
 import getData from './utils/getData.ts';
 import MovementInstruction from './interfaces/MovementInstruction.ts';
 import Direction from './enums/Direction.ts';

@@ -31,7 +31,7 @@ function getEpsilonRate(data: string[]): number {
   return Number.parseInt(epsilon, 2);
 }
 
-function run() {
+function puzzleOne() {
   const gammaRate = getGammaRate(data);
   const epsilonRate = getEpsilonRate(data);
   console.log(`gamma rate: ${gammaRate}`);
@@ -39,4 +39,4 @@ function run() {
   console.log(`power level: ${gammaRate * epsilonRate}`);
 }
 
-run();
+puzzleOne();

@@ -12,6 +12,7 @@ const data = getData('data/data.txt');
 const winningNumbers = parseWinningNumbers(data);
 let boards = parseBoards(data);
 
+// TODO: function is a bit long, consider refactoring
 function getFinalWinningBoardScore(): number {
   for (const winningNumber of winningNumbers) {
     const nextBoards = fillScore(boards, winningNumber);
@@ -25,5 +26,9 @@ function getFinalWinningBoardScore(): number {
   return 0;
 }
 
-const lastWinningBoardScore = getFinalWinningBoardScore();
-console.log(`last winning board final score: ${lastWinningBoardScore}`);
+function puzzleTwo() {
+  const lastWinningBoardScore = getFinalWinningBoardScore();
+  console.log(`last winning board final score: ${lastWinningBoardScore}`);
+}
+
+puzzleTwo();

@@ -13,7 +13,8 @@ const data = getData('data/data.txt');
 const winningNumbers: number[] = parseWinningNumbers(data);
 const boards: Board[] = parseBoards(data);
 
-function playBingo() {
+// TODO: too complex, consider refactoring
+function puzzleOne() {
   let workingBoards: Board[] = boards;
   winningNumbers.forEach(winningNumber => {
     workingBoards = fillScore(workingBoards, winningNumber);
@@ -28,4 +29,4 @@ function playBingo() {
   });
 }
 
-playBingo();
+puzzleOne();

@@ -12,7 +12,7 @@ const lines = data.map(lineStr => parseLine(lineStr));
 
 const horizontalAndVerticalLines = lines.filter(isHorizontalOrVerticalLine);
 
-function solvePuzzleOne() {
+function puzzleOne() {
   const maxX = getMaxNumber(horizontalAndVerticalLines, Axis.X);
   const maxY = getMaxNumber(horizontalAndVerticalLines, Axis.Y);
   let board = createBoard(maxX, maxY);
@@ -23,4 +23,4 @@ function solvePuzzleOne() {
   console.log(`total number of overlapping lines: ${totalOverlaps}`);
 }
 
-solvePuzzleOne();
+puzzleOne();

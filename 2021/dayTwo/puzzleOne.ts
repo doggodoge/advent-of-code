@@ -29,7 +29,10 @@ function getFinalPosition(instructions: MovementInstruction[]): Position {
   return currentPosition;
 }
 
-const movementInstructions = data.map(x => parseMovement(x));
-const finalPosition = getFinalPosition(movementInstructions);
+function puzzleOne() {
+  const movementInstructions = data.map(x => parseMovement(x));
+  const finalPosition = getFinalPosition(movementInstructions);
+  console.log(`answer: ${finalPosition.depth * finalPosition.horizontal}`);
+}
 
-console.log(`answer: ${finalPosition.depth * finalPosition.horizontal}`);
+puzzleOne();

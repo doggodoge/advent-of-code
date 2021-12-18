@@ -1,4 +1,4 @@
-import Board from '../types/Board.ts';
+import Board from '../../types/Board.ts';
 
 // TODO: Figure out an alternative to this hideous workaround. Array(x).fill()
 //  doesn't work because for whatever reason it uses the same row reference for

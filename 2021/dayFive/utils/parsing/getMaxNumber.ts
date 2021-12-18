@@ -1,5 +1,5 @@
-import Line from '../interfaces/Line.ts';
-import Axis from '../enums/Axis.ts';
+import Line from '../../interfaces/Line.ts';
+import Axis from '../../enums/Axis.ts';
 
 function joinArrays<Type>(a: Type[], b: Type[]): Type[] {
   return [...a, ...b];

@@ -1,4 +1,4 @@
-import Board from '../types/Board.ts';
+import Board from '../../types/Board.ts';
 
 function getTotalOverlaps(board: Board): number {
   return board

@@ -1,5 +1,5 @@
-import Coordinate from '../interfaces/Coordinate.ts';
-import Line from '../interfaces/Line.ts';
+import Coordinate from '../../interfaces/Coordinate.ts';
+import Line from '../../interfaces/Line.ts';
 
 function parseCoordinate(coordinateStr: string): Coordinate {
   const [x, y] = coordinateStr.split(',');

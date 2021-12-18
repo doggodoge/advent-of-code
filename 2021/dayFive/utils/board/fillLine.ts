@@ -1,5 +1,5 @@
-import Board from '../types/Board.ts';
-import Line from '../interfaces/Line.ts';
+import Board from '../../types/Board.ts';
+import Line from '../../interfaces/Line.ts';
 
 function fillLine(board: Board, line: Line): Board {
   const newBoard: Board = [...board];

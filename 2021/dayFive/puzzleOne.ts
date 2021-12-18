@@ -12,7 +12,6 @@ const lines = data.map(lineStr => parseLine(lineStr));
 
 const horizontalAndVerticalLines = lines.filter(isHorizontalOrVerticalLine);
 
-// We want to draw lines, and determine which lines overlap.
 function solvePuzzleOne() {
   const maxX = getMaxNumber(horizontalAndVerticalLines, Axis.X);
   const maxY = getMaxNumber(horizontalAndVerticalLines, Axis.Y);

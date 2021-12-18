@@ -22,8 +22,8 @@ function solvePuzzleOne() {
     board = fillLine(board, line);
   });
   printBoard(board);
-  const total = getTotalOverlaps(board);
-  console.log(`total number of overlapping lines: ${total}`);
+  const totalOverlaps = getTotalOverlaps(board);
+  console.log(`total number of overlapping lines: ${totalOverlaps}`);
 }
 
 solvePuzzleOne();

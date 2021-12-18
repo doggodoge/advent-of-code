@@ -4,11 +4,10 @@ import isHorizontalOrVerticalLine from './utils/parsing/isHorizontalOrVerticalLi
 import getMaxNumber from './utils/parsing/getMaxNumber.ts';
 import Axis from './enums/Axis.ts';
 import createBoard from './utils/board/createBoard.ts';
-import formatBoard from './utils/board/formatBoard.ts';
 import fillLine from './utils/board/fillLine.ts';
 import getTotalOverlaps from './utils/board/getTotalOverlaps.ts';
 
-const data = getData('data/sample.txt');
+const data = getData('data/data.txt');
 const lines = data.map(lineStr => parseLine(lineStr));
 
 const horizontalAndVerticalLines = lines.filter(isHorizontalOrVerticalLine);
@@ -21,7 +20,6 @@ function solvePuzzleOne() {
   horizontalAndVerticalLines.forEach(line => {
     board = fillLine(board, line);
   });
-  console.log(formatBoard(board));
   const totalOverlaps = getTotalOverlaps(board);
   console.log(`total number of overlapping lines: ${totalOverlaps}`);
 }

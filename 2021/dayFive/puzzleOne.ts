@@ -6,6 +6,7 @@ import Axis from './enums/Axis.ts';
 import createBoard from './utils/createBoard.ts';
 import printBoard from './utils/printBoard.ts';
 import fillLine from './utils/fillLine.ts';
+import getTotalOverlaps from './utils/getTotalOverlaps.ts';
 
 const data = getData('data/sample.txt');
 const lines = data.map(lineStr => parseLine(lineStr));
@@ -21,10 +22,7 @@ function solvePuzzle() {
     board = fillLine(board, line);
   });
   printBoard(board);
-  const total = board
-    .reduce((first, second) => [...first, ...second])
-    .filter(num => num > 1)
-    .length;
+  const total = getTotalOverlaps(board);
   console.log(`total number of overlapping lines: ${total}`);
 }
 

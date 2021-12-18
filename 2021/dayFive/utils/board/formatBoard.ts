@@ -5,7 +5,7 @@ function formatBoard(board: Board): String {
   board.forEach(row => {
     let line = '';
     row.forEach(number => {
-      line += `${number} `;
+      line += `${number === 0 ? '.' : number} `;
     });
     boardStr += `${line.trim()}\n`;
   });

@@ -1,10 +1,11 @@
 import Board from '../../types/Board.ts';
 import Line from '../../interfaces/Line.ts';
+import range from '../collections/range.ts';
 
 function fillLine(board: Board, line: Line): Board {
   const newBoard: Board = [...board];
-  for (let x = line.start.x; x <= line.end.x; x++) {
-    for (let y = line.start.y; y <= line.end.y; y++) {
+  for (const x of range(line.start.x, line.end.x)) {
+    for (const y of range(line.start.y, line.end.y)) {
       newBoard[x][y] += 1;
     }
   }

@@ -3,7 +3,7 @@
 import getNumberOfIncreasingPings from './utils/getNumberOfIncreasingPings.ts';
 
 function puzzleOne(data: number[]) {
-    return getNumberOfIncreasingPings(data);
+  return getNumberOfIncreasingPings(data);
 }
 
 export default puzzleOne;

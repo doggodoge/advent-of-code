@@ -23,7 +23,7 @@ function getBasementIndex(
   Deno.exit(1);
 }
 
-let basementIndex =
+const basementIndex =
   getBasementIndex(directions);
 
 console.log(

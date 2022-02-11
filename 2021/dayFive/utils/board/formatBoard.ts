@@ -1,6 +1,6 @@
 import Board from '../../types/Board.ts';
 
-function formatBoard(board: Board): String {
+function formatBoard(board: Board): string {
   let boardStr = '';
   board.forEach(row => {
     let line = '';

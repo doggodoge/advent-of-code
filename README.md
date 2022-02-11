@@ -1,5 +1,7 @@
 # Advent of Code
 
+[![advent-of-code](https://github.com/doggodoge/advent-of-code/actions/workflows/deno.yml/badge.svg)](https://github.com/doggodoge/advent-of-code/actions/workflows/deno.yml)
+
 This is the collection of all my solutions for the advent of code challenges.
 Probably not much in here, haven't been very good at completing these.
 

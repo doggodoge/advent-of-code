@@ -1,6 +1,5 @@
 // --- Day 4: Giant Squid ---
 // ---  Puzzle 1          ---
-import getData from './utils/getData.ts';
 import parseBoards from './utils/parseBoards.ts';
 import Board from './types/Board.ts';
 import parseWinningNumbers from './utils/parseWinningNumbers.ts';
@@ -8,25 +7,19 @@ import fillScore from './utils/fillScore.ts';
 import checkScore from './utils/checkScore.ts';
 import getFinalScore from './utils/getFinalScore.ts';
 
-const data = getData('data/data.txt');
-
-const winningNumbers: number[] = parseWinningNumbers(data);
-const boards: Board[] = parseBoards(data);
-
 // TODO: too complex, consider refactoring
-function puzzleOne() {
-  let workingBoards: Board[] = boards;
+function puzzleOne(data: string): number {
+  const winningNumbers: number[] = parseWinningNumbers(data);
+  let workingBoards: Board[] = parseBoards(data);
   winningNumbers.forEach((winningNumber) => {
     workingBoards = fillScore(workingBoards, winningNumber);
     workingBoards.forEach((board) => {
       if (checkScore(board)) {
-        console.log(
-          `a board won! score: ${getFinalScore(board, winningNumber)}`,
-        );
-        Deno.exit(0);
+        return getFinalScore(board, winningNumber);
       }
     });
   });
+  return 0;
 }
 
-puzzleOne();
+export default puzzleOne;

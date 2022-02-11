@@ -1,19 +1,18 @@
 // --- Day 4: Giant Squid ---
 // ---  Puzzle 2          ---
-import getData from './utils/getData.ts';
 import parseBoards from './utils/parseBoards.ts';
 import parseWinningNumbers from './utils/parseWinningNumbers.ts';
 import fillScore from './utils/fillScore.ts';
 import checkScore from './utils/checkScore.ts';
 import getFinalScore from './utils/getFinalScore.ts';
-
-const data = getData('data/data.txt');
-
-const winningNumbers = parseWinningNumbers(data);
-let boards = parseBoards(data);
+import Board from './types/Board.ts';
 
 // TODO: function is a bit long, consider refactoring
-function getFinalWinningBoardScore(): number {
+function getFinalWinningBoardScore(
+  data: string,
+): number {
+  let boards: Board[] = parseBoards(data);
+  const winningNumbers = parseWinningNumbers(data);
   for (const winningNumber of winningNumbers) {
     const nextBoards = fillScore(boards, winningNumber);
     const winners = nextBoards.filter((board) => checkScore(board));
@@ -26,9 +25,8 @@ function getFinalWinningBoardScore(): number {
   return 0;
 }
 
-function puzzleTwo() {
-  const lastWinningBoardScore = getFinalWinningBoardScore();
-  console.log(`last winning board final score: ${lastWinningBoardScore}`);
+function puzzleTwo(data: string): number {
+  return getFinalWinningBoardScore(data);
 }
 
-puzzleTwo();
+export default puzzleTwo;

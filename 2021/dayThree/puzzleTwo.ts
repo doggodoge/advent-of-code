@@ -10,14 +10,14 @@ function getOxygenGeneratorRating(data: string[]): number {
       break;
     }
     const numberOfOnes = workingData
-      .map(item => [...item][index])
-      .map(item => Number(item))
+      .map((item) => [...item][index])
+      .map((item) => Number(item))
       .reduce((first, second) => first + second);
     const numberOfZeroes = workingData.length - numberOfOnes;
     if (numberOfOnes >= numberOfZeroes) {
-      workingData = workingData.filter(item => [...item][index] === '1');
+      workingData = workingData.filter((item) => [...item][index] === '1');
     } else {
-      workingData = workingData.filter(item => [...item][index] === '0');
+      workingData = workingData.filter((item) => [...item][index] === '0');
     }
   }
   return Number.parseInt(workingData[0], 2);
@@ -30,14 +30,14 @@ function getCO2ScrubberRating(data: string[]): number {
       break;
     }
     const numberOfOnes = workingData
-      .map(item => [...item][index])
-      .map(item => Number(item))
+      .map((item) => [...item][index])
+      .map((item) => Number(item))
       .reduce((first, second) => first + second);
     const numberOfZeroes = workingData.length - numberOfOnes;
     if (numberOfZeroes > numberOfOnes) {
-      workingData = workingData.filter(item => [...item][index] === '1');
+      workingData = workingData.filter((item) => [...item][index] === '1');
     } else {
-      workingData = workingData.filter(item => [...item][index] === '0');
+      workingData = workingData.filter((item) => [...item][index] === '0');
     }
   }
   return Number.parseInt(workingData[0], 2);

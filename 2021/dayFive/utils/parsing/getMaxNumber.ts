@@ -7,14 +7,14 @@ function joinArrays<Type>(a: Type[], b: Type[]): Type[] {
 
 function getMaxNumberXAxis(lines: Line[]): number {
   return lines
-    .map(line => [line.start.x, line.end.x])
+    .map((line) => [line.start.x, line.end.x])
     .reduce(joinArrays)
     .reduce((a, b) => Math.max(a, b));
 }
 
 function getMaxNumberYAxis(lines: Line[]): number {
   return lines
-    .map(line => [line.start.y, line.end.y])
+    .map((line) => [line.start.y, line.end.y])
     .reduce(joinArrays)
     .reduce((a, b) => Math.max(a, b));
 }

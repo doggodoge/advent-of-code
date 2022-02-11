@@ -13,7 +13,7 @@ function parseRow(rowStr: string): Score[] {
   return rowStr
     .trim()
     .split(/ +/)
-    .map(numStr => {
+    .map((numStr) => {
       return { score: Number(numStr.trim()), checked: false };
     });
 }

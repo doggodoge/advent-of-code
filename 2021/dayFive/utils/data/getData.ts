@@ -4,4 +4,3 @@ function getData(path: string): string[] {
 }
 
 export default getData;
-

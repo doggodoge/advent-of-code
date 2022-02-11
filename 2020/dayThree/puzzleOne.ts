@@ -9,7 +9,7 @@ enum EnvironmentItem {
 }
 
 function parseGroundLine(line: string): EnvironmentItem[] {
-  return [...line].map(char =>
+  return [...line].map((char) =>
     char === '#' ? EnvironmentItem.Tree : EnvironmentItem.Empty
   );
 }

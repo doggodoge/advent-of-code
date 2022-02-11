@@ -3,7 +3,7 @@ function getData(path: string): number[] {
   return decoder
     .decode(Deno.readFileSync(path))
     .split('\n')
-    .map(x => Number(x));
+    .map((x) => Number(x));
 }
 
 export default getData;

@@ -5,7 +5,7 @@ const directions = getData('data/data.txt');
 
 function navigateToFloor(directions: Direction[]) {
   let currentFloor = 0;
-  directions.forEach(direction => {
+  directions.forEach((direction) => {
     switch (direction) {
       case Direction.Up:
         currentFloor += 1;

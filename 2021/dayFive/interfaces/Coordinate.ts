@@ -4,4 +4,3 @@ interface Coordinate {
 }
 
 export default Coordinate;
-

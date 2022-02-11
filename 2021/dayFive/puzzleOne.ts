@@ -8,7 +8,7 @@ import fillLine from './utils/board/fillLine.ts';
 import getTotalOverlaps from './utils/board/getTotalOverlaps.ts';
 
 const data = getData('data/data.txt');
-const lines = data.map(lineStr => parseLine(lineStr));
+const lines = data.map((lineStr) => parseLine(lineStr));
 
 const horizontalAndVerticalLines = lines.filter(isHorizontalOrVerticalLine);
 
@@ -16,7 +16,7 @@ function puzzleOne() {
   const maxX = getMaxNumber(horizontalAndVerticalLines, Axis.X);
   const maxY = getMaxNumber(horizontalAndVerticalLines, Axis.Y);
   let board = createBoard(maxX, maxY);
-  horizontalAndVerticalLines.forEach(line => {
+  horizontalAndVerticalLines.forEach((line) => {
     board = fillLine(board, line);
   });
   const totalOverlaps = getTotalOverlaps(board);

@@ -16,7 +16,7 @@ if (permissionStatus.state === 'granted') {
 
   console.log(`Life support rating [${puzzleTwoResult.lifeSupportRating}]:`);
   console.log(
-    `\tOxygen generator rating [${puzzleTwoResult.oxygenGeneratorRating}]`
+    `\tOxygen generator rating [${puzzleTwoResult.oxygenGeneratorRating}]`,
   );
   console.log(`\tCO2 generator rating [${puzzleTwoResult.CO2GeneratorRating}]`);
 } else {

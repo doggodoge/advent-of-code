@@ -12,7 +12,7 @@ interface Position {
 
 function getFinalPosition(instructions: MovementInstruction[]): Position {
   const currentPosition: Position = { depth: 0, horizontal: 0, aim: 0 };
-  instructions.forEach(instruction => {
+  instructions.forEach((instruction) => {
     switch (instruction.direction) {
       case Direction.Up:
         currentPosition.aim -= instruction.amount;
@@ -29,7 +29,7 @@ function getFinalPosition(instructions: MovementInstruction[]): Position {
 }
 
 function puzzleTwo(data: string[]): number {
-  const movementInstructions = data.map(x => parseMovement(x));
+  const movementInstructions = data.map((x) => parseMovement(x));
   const finalPosition = getFinalPosition(movementInstructions);
   return finalPosition.depth * finalPosition.horizontal;
 }

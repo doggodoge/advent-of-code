@@ -16,12 +16,12 @@ const boards: Board[] = parseBoards(data);
 // TODO: too complex, consider refactoring
 function puzzleOne() {
   let workingBoards: Board[] = boards;
-  winningNumbers.forEach(winningNumber => {
+  winningNumbers.forEach((winningNumber) => {
     workingBoards = fillScore(workingBoards, winningNumber);
-    workingBoards.forEach(board => {
+    workingBoards.forEach((board) => {
       if (checkScore(board)) {
         console.log(
-          `a board won! score: ${getFinalScore(board, winningNumber)}`
+          `a board won! score: ${getFinalScore(board, winningNumber)}`,
         );
         Deno.exit(0);
       }

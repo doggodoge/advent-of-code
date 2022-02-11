@@ -1,8 +1,6 @@
 // --- Day 3: Binary Diagnostic ---
 // ---  Puzzle 1                ---
-import getData from './utils/getData.ts';
-
-const data = getData('data/data.txt');
+import PuzzleOneResult from './interfaces/PuzzleOneResult.ts';
 
 // TODO: This is very messy, try and clean it up at some point.
 function getGammaRate(data: string[]): number {
@@ -31,12 +29,11 @@ function getEpsilonRate(data: string[]): number {
   return Number.parseInt(epsilon, 2);
 }
 
-function puzzleOne() {
+function puzzleOne(data: string[]): PuzzleOneResult {
   const gammaRate = getGammaRate(data);
   const epsilonRate = getEpsilonRate(data);
-  console.log(`gamma rate: ${gammaRate}`);
-  console.log(`epsilon rate: ${epsilonRate}`);
-  console.log(`power level: ${gammaRate * epsilonRate}`);
+  const powerLevel = gammaRate * epsilonRate;
+  return { gammaRate, epsilonRate, powerLevel };
 }
 
-puzzleOne();
+export default puzzleOne;

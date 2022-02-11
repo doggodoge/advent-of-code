@@ -1,8 +1,7 @@
 // --- Day 3: Binary Diagnostic ---
 // ---  Puzzle 2                ---
-import getData from './utils/getData.ts';
 
-const data = getData('data/data.txt');
+import PuzzleTwoResult from './interfaces/PuzzleTwoResult.ts';
 
 function getOxygenGeneratorRating(data: string[]): number {
   let workingData = [...data];
@@ -44,15 +43,11 @@ function getCO2ScrubberRating(data: string[]): number {
   return Number.parseInt(workingData[0], 2);
 }
 
-function puzzleTwo() {
+function puzzleTwo(data: string[]): PuzzleTwoResult {
   const oxygenGeneratorRating = getOxygenGeneratorRating(data);
   const CO2GeneratorRating = getCO2ScrubberRating(data);
-
-  console.log(`oxygen generator rating: ${oxygenGeneratorRating}`);
-  console.log(`CO2 generator rating: ${CO2GeneratorRating}`);
-  console.log(
-    `life support rating: ${oxygenGeneratorRating * CO2GeneratorRating}`
-  );
+  const lifeSupportRating = oxygenGeneratorRating * CO2GeneratorRating;
+  return { oxygenGeneratorRating, CO2GeneratorRating, lifeSupportRating };
 }
 
-puzzleTwo();
+export default puzzleTwo;

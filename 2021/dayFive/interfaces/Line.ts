@@ -6,4 +6,3 @@ interface Line {
 }
 
 export default Line;
-

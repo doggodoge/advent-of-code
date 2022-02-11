@@ -4,7 +4,7 @@ function getData(): number[] {
   return decoder
     .decode(data)
     .split('\n')
-    .map(numberString => Number(numberString));
+    .map((numberString) => Number(numberString));
 }
 
 export default getData;

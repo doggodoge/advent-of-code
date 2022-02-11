@@ -6,5 +6,5 @@ const result = getTwoEntriesThatSumUpTo2020(data);
 
 console.log(`The two offending numbers are ${result[0]}, and ${result[1]}.`);
 console.log(
-  `Multiplying these numbers together gets us: ${result[0] * result[1]}.`
+  `Multiplying these numbers together gets us: ${result[0] * result[1]}.`,
 );

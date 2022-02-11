@@ -2,7 +2,7 @@ import Score from '../interfaces/Score.ts';
 import Board from '../types/Board.ts';
 
 function checkRow(row: Score[]): boolean {
-  return row.map(x => x.checked).reduce((a, b) => a && b);
+  return row.map((x) => x.checked).reduce((a, b) => a && b);
 }
 
 function getBoardColumns(board: Board): Board {

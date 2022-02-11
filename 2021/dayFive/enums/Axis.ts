@@ -1,6 +1,6 @@
 enum Axis {
   X,
-  Y
+  Y,
 }
 
 export default Axis;

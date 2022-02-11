@@ -9,8 +9,8 @@ Will try and get 2020 done, definitely will get 2021 finished.
 
 ## How to Run
 
-I've used the Deno TypeScript runtime for all these solutions, so to use you will
-need to install Deno.
+I've used the Deno TypeScript runtime for all these solutions, so to use you
+will need to install Deno.
 
 ```shell
 cargo install deno --locked

@@ -7,7 +7,7 @@ function parseCoordinate(coordinateStr: string): Coordinate {
 }
 
 function parseLine(lineStr: string): Line {
-  const [startStr, endStr] = lineStr.split('->').map(line => line.trim());
+  const [startStr, endStr] = lineStr.split('->').map((line) => line.trim());
   return { start: parseCoordinate(startStr), end: parseCoordinate(endStr) };
 }
 

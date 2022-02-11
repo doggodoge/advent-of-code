@@ -11,7 +11,7 @@ function parseDirection(parenthesis: string): Direction {
 function getData(path: string): Direction[] {
   const decoder = new TextDecoder('utf-8');
   const data = decoder.decode(Deno.readFileSync(path));
-  return [...data].map(parenthesis => parseDirection(parenthesis));
+  return [...data].map((parenthesis) => parseDirection(parenthesis));
 }
 
 export default getData;

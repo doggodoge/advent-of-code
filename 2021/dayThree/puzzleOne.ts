@@ -7,8 +7,8 @@ function getGammaRate(data: string[]): number {
   let gamma = '';
   for (let index = 0; index < data[0].length; index++) {
     const numberOfOnes = data
-      .map(item => [...item][index])
-      .map(item => Number.parseInt(item, 2))
+      .map((item) => [...item][index])
+      .map((item) => Number.parseInt(item, 2))
       .reduce((first, second) => first + second);
     const numberOfZeroes = data.length - numberOfOnes;
     numberOfOnes > numberOfZeroes ? (gamma += 1) : (gamma += 0);
@@ -20,8 +20,8 @@ function getEpsilonRate(data: string[]): number {
   let epsilon = '';
   for (let index = 0; index < data[0].length; index++) {
     const numberOfOnes = data
-      .map(item => [...item][index])
-      .map(item => Number.parseInt(item, 2))
+      .map((item) => [...item][index])
+      .map((item) => Number.parseInt(item, 2))
       .reduce((first, second) => first + second);
     const numberOfZeroes = data.length - numberOfOnes;
     numberOfOnes < numberOfZeroes ? (epsilon += 1) : (epsilon += 0);

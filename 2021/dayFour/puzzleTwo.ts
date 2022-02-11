@@ -16,8 +16,8 @@ let boards = parseBoards(data);
 function getFinalWinningBoardScore(): number {
   for (const winningNumber of winningNumbers) {
     const nextBoards = fillScore(boards, winningNumber);
-    const winners = nextBoards.filter(board => checkScore(board));
-    const losers = nextBoards.filter(board => !checkScore(board));
+    const winners = nextBoards.filter((board) => checkScore(board));
+    const losers = nextBoards.filter((board) => !checkScore(board));
     if (losers.length === 0) {
       return getFinalScore(winners[0], winningNumber);
     }

@@ -1,6 +1,6 @@
 enum Direction {
   Up,
-  Down
+  Down,
 }
 
 export default Direction;

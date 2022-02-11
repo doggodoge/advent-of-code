@@ -1,6 +1,6 @@
-function getData(): number[] {
+function getData(path: string): number[] {
   const decoder = new TextDecoder('utf-8');
-  const data: Uint8Array = Deno.readFileSync('data/data.txt');
+  const data: Uint8Array = Deno.readFileSync(path);
   return decoder
     .decode(data)
     .split('\n')

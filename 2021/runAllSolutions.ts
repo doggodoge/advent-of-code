@@ -13,39 +13,12 @@ interface Answer {
   answerTwo: string;
 }
 
-const readPermissionRequest = await Promise.all([
-  Deno.permissions.request({
-    name: 'read',
-    path: './dayOne/data/data.txt',
-  }),
-  Deno.permissions.request({
-    name: 'read',
-    path: './dayTwo/data/data.txt',
-  }),
-  Deno.permissions.request({
-    name: 'read',
-    path: './dayThree/data/data.txt',
-  }),
-  Deno.permissions.request({
-    name: 'read',
-    path: './dayFour/data/data.txt',
-  }),
-]);
-
-const haveReadAccess = readPermissionRequest.map((status) =>
-  status.state === 'granted'
-).reduce((a, b) => a && b);
-
-if (haveReadAccess) {
-  printAllSolutions();
-} else {
-  console.error('Please allow read permissions.');
-}
+printAllSolutions();
 
 function printAllSolutions() {
-  printSolution(dayOne('2021/dayOne/data/data.txt'));
-  printSolution(dayTwo('2021/dayTwo/data/data.txt'));
-  printSolution(dayThree('2021/dayThree/data/data.txt'));
+  printSolution(dayOne('dayOne/data/data.txt'));
+  printSolution(dayTwo('dayTwo/data/data.txt'));
+  printSolution(dayThree('dayThree/data/data.txt'));
   // TODO: For some reason after refactoring, the solutions for day four
   //  no longer work. Try and fix it, then enable this and the unit tests
   //  for day four again.

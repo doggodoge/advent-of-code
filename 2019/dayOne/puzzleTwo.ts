@@ -1,6 +1,8 @@
 import { assertEquals } from 'https://deno.land/std@0.130.0/testing/asserts.ts';
 import sum from './utils/sum.ts';
 
+// TODO: find a solution not so horrific looking when I'm
+//  not so tired.
 function fuelRequiredByComponent(componentMass: number): number {
   const fuelFunction = (mass: number) => (Math.floor(mass / 3) - 2);
   let fuelList = [fuelFunction(componentMass)];

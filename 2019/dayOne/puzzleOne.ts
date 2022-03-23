@@ -1,5 +1,5 @@
-import getFuelRequirement from "./utils/getFuelRequirement.ts";
-import sum from "./utils/sum.ts";
+import getFuelRequirement from './utils/getFuelRequirement.ts';
+import sum from './utils/sum.ts';
 
 function puzzleOne(data: number[]): number {
   return data

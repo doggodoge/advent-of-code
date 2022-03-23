@@ -1,5 +1,5 @@
-import { assertEquals } from "https://deno.land/std@0.130.0/testing/asserts.ts";
-import sum from "./utils/sum.ts";
+import { assertEquals } from 'https://deno.land/std@0.130.0/testing/asserts.ts';
+import sum from './utils/sum.ts';
 
 function fuelRequiredByComponent(componentMass: number): number {
   const fuelFunction = (mass: number) => (Math.floor(mass / 3) - 2);
@@ -14,7 +14,7 @@ function fuelRequiredByComponent(componentMass: number): number {
   return fuelList.reduce(sum);
 }
 
-Deno.test("fuelRequiredByComponent should return valid fuel values", () => {
+Deno.test('fuelRequiredByComponent should return valid fuel values', () => {
   assertEquals(fuelRequiredByComponent(100756), 50346);
 });
 

@@ -1,4 +1,6 @@
-# Advent of Code
+Archived on GitHub and moved to https://git.sr.ht/~gary_moore/advent-of-code
+
+    # Advent of Code
 
 [![advent-of-code](https://github.com/doggodoge/advent-of-code/actions/workflows/deno.yml/badge.svg)](https://github.com/doggodoge/advent-of-code/actions/workflows/deno.yml)
 
